@@ -40,7 +40,10 @@
       "fragment-list",
       "flights",
       "join-us",
-      "flight-search"
+      "flight-search",
+      "confirmation",
+      "sign-in",
+      "checkout"
     ]
   },
   {
@@ -76,6 +79,9 @@
       "title",
       "title-block",
       "video",
+      "join-us",
+      "fragment-list",
+      "create-account",
       "dynamic-media-video"
     ]
   },
