@@ -351,16 +351,17 @@ header nav .nav-tools {
   gap: 10px;
 }
 
-/* Keep only the authored Sign In button in nav tools on nav text color.
-   Scoped to a.button.primary inside header nav .nav-tools so it cannot
-   match anything outside nav (language switcher items use no button
-   classes, so they remain unaffected). !important guards against
-   the higher-specificity global button color rule in styles.css. */
-header nav .nav-tools a.button.primary,
-header nav .nav-tools a.button.primary:any-link,
-header nav .nav-tools a.button.primary:hover,
-header nav .nav-tools a.button.primary:focus {
-  color: var(--nav-text-color) !important;
+/* Keep the authored Sign In button aligned with nav text color.
+   NOTE: Sign In is authored as its own top-level nav section (a sibling
+   of .nav-tools, not a child of it — the classes.forEach loop above only
+   tags the first 3 sections as nav-brand/nav-sections/nav-tools), so the
+   selector is scoped to "header nav" rather than ".nav-tools" to reliably
+   match it while still staying fully contained to header navigation
+   (cannot affect buttons anywhere outside <nav>). !important guards
+   against the higher-specificity global button color rule in styles.css. */
+
+nav .section .default-content-wrapper .button-container strong a.button{
+  color: var(--nav-text-color);
 }
 
 /* language switcher */
