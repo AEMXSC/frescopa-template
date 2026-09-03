@@ -351,6 +351,13 @@ header nav .nav-tools {
   gap: 10px;
 }
 
+/* Keep only the authored Sign In button in nav tools on nav text color. */
+header nav .nav-tools > .default-content-wrapper > p.button-container > strong > a.button.primary:any-link,
+header nav .nav-tools > .default-content-wrapper > p.button-container > strong > a.button.primary:hover,
+header nav .nav-tools > .default-content-wrapper > p.button-container > strong > a.button.primary:focus {
+  color: var(--nav-text-color);
+}
+
 /* language switcher */
 .lang-switcher {
   position: relative;
