@@ -226,7 +226,7 @@ async function fetchFragmentData(config) {
 // --- Transformers ---
 
 function transformOpenAPIItem(item, isAuthorEnv) {
-  const imageUrl = resolveImageUrl(item?.images, isAuthorEnv);
+  const imageUrl = resolveImageUrl(item?.image, isAuthorEnv);
 
   const tags = Array.isArray(item?.tags)
     ? item.tags.map(extractTagLabel).filter(Boolean)
